@@ -34,8 +34,6 @@ def getMinimumDifference(a, b):
         word_1_freq = dict(collections.Counter(a[array_index]))
         word_2_freq = dict(collections.Counter(b[array_index]))
         
-        print(word_1_freq, word_2_freq)
-        
         for letter, value in word_1_freq.items():
             if letter in word_2_freq:
                 word_difference += abs(word_1_freq[letter] - word_2_freq[letter])
@@ -46,15 +44,10 @@ def getMinimumDifference(a, b):
         differences_array.append(word_difference)
         
     return differences_array
-                
-        
-        
-          
+                 
+         
 a = ['a', 'jk', 'abb', 'mn', 'abc']
-b = ['bb', 'kj', 'bbc', 'op', 'def']
-
-print(getMinimumDifference(a, b))
-            
+b = ['bb', 'kj', 'bbc', 'op', 'def']        
             
 class TestAnagram(unittest.TestCase):
     def test(self):
